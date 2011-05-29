@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en-GB" dir="ltr">
+    <head>
+		<title>jQuery Line length plugin</title>
+		<meta charset="utf-8">
+		<style>
+			body {
+				font-family: Arial, Helvetica, sans-serif;
+				margin: 10px;
+				font-size: 12px;
+			}
+			#page {
+				width: 960px;
+				margin: 0 auto;
+			}
+			h1 {
+				font-size: 20px;
+			}
+			h2 {
+				font-size: 16px;
+				font-weight: normal;
+			}
+			h3 {
+				font-size: 14px;
+				font-weight: normal;
+			}
+			#example-one,
+			#example-two,
+			#example-three {
+				width: 200px;
+				border: 1px solid #CCC;
+				border-radius: 5px;
+				padding: 5px 10px;
+				margin: 0 0 10px;
+			}
+		</style>
+		<script src="jquery.js"></script>
+		<script src="jquey.linelength.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('#example-one').linelength({setHeight: 50, setWidth: 900});
+				$('#example-two').linelength({setHeight: 100, setWidth: 500});
+				$('#example-three').linelength({setHeight: 30, setWidth: 500});
+			});
+		</script>
+    </head>
+    <body>
+		<div id="page">
+			<h1>jQuery Line Length plugin</h1>
+			<p>Example of the jQuery Line Length plugin. Plugin is developed for controlling text based on it's height and width parameters.</p>
+			<p>Plugin parameters include:</p>
+			<ul>
+				<li>setHeight: Set the height that the plugin should attempt to make the element.</li>
+				<li>setWidth: Set the maximum width the element make expand to, if the element reaches the maximum width it will stop trying to alter the height..</li>
+			</ul>
+			<p>CSS styling is example only.</p>
+			<div id="example-one">
+				<h2>Example one</h2>
+				<h3>Example on has a height set at 50px and a maximum width of 900px. It will reach the 50px height before the 900px width limit.</h3>
+			</div>
+			<div id="example-two">
+				<h2>Example two</h2>
+				<h3>Example on has a height set at 100px and a maximum width of 500px. It will reach the 100px height before the 500px width limit.</h3>
+			</div>
+			<div id="example-three">
+				<h2>Example three</h2>
+				<h3>Example on has a height set at 30px and a maximum width of 500px. It won't reach the 30px height before the 500px width limit.</h3>
+			</div>
+			<p>Further information can be found at <a href="https://github.com/georgepaterson/jquery-linelength">https://github.com/georgepaterson/jquery-linelength</a></p>
+		</div>
+    </body>
+</html>
